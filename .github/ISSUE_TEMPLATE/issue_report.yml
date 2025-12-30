@@ -104,17 +104,19 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: environment
+  - type: textarea
+    id: survival_area
     attributes:
-      label: Where did the issue occur? / Dove si è verificato il problema?
-      options:
-        - Survival / Survival
-        - Creative / Creative
-        - Lobby / Lobby
-        - Minigames / Minigiochi
-        - Custom world / Mondo personalizzato
-        - Other / Altro
+      label: Survival area or context / Area o contesto del Survival
+      description: |
+        🇬🇧 Specify where in the Survival world the issue occurred (warp, coordinates, region, farm, protected area, etc.).  
+        🇮🇹 Specifica dove nel mondo Survival si è verificato il problema (warp, coordinate, regione, farm, area protetta, ecc.).
+      placeholder: |
+        Example / Esempio:
+        - Warp: /warp market
+        - Coordinates: X 120, Y 64, Z -340
+        - Area: Player base / Base di un giocatore
+        - Region: Protected region / Regione protetta
     validations:
       required: true
 
