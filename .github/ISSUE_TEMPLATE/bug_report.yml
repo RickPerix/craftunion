@@ -1,0 +1,115 @@
+name: Bug Report / Segnalazione Bug
+description: Report a problem encountered on the Minecraft server / Segnala un problema riscontrato nel server Minecraft
+title: "[BUG] Short description / Breve descrizione"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🇬🇧 English
+        Thank you for reporting a bug! Please fill out the form below with as much detail as possible.
+
+        ## 🇮🇹 Italiano
+        Grazie per aver segnalato un bug! Compila il modulo seguente con più dettagli possibile.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Issue type / Tipo di problema
+      options:
+        - Technical issue / crash
+        - Lag / performance issue
+        - Gameplay bug
+        - UI / visual issue (menus, scoreboard, etc.)
+        - Permission issue
+        - Other / Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_were_you_doing
+    attributes:
+      label: What were you trying to do? / Cosa stavi cercando di fare?
+      description: |
+        🇬🇧 Explain the action you were performing.  
+        🇮🇹 Spiega l'azione che stavi compiendo.
+      placeholder: |
+        Example / Esempio:
+        I was trying to open a chest...
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened instead? / Cosa è successo invece?
+      description: |
+        🇬🇧 Describe the incorrect or unexpected behavior.  
+        🇮🇹 Descrivi il comportamento errato o inatteso.
+      placeholder: |
+        Example / Esempio:
+        The chest didn't open and I received an error message...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Steps to reproduce / Passaggi per riprodurre
+      description: |
+        🇬🇧 List the steps needed to trigger the issue.  
+        🇮🇹 Elenca i passaggi necessari per far accadere il problema.
+      placeholder: |
+        1. Go to... / Vai in...
+        2. Use the command... / Usa il comando...
+        3. Interact with... / Interagisci con...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Is the issue reproducible? / Il problema è riproducibile?
+      options:
+        - Always / Sempre
+        - Sometimes / A volte
+        - Only under specific conditions / Solo in condizioni specifiche
+        - I don't know / Non lo so
+    validations:
+      required: true
+
+  - type: input
+    id: client_version
+    attributes:
+      label: Minecraft client version / Versione del client Minecraft
+      placeholder: "Example / Esempio: 1.20.4"
+    validations:
+      required: true
+
+  - type: input
+    id: client_mods
+    attributes:
+      label: Mods or special clients? / Usi mod o client particolari?
+      placeholder: "Example / Esempio: Lunar Client, Forge, Optifine..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots or logs (optional) / Screenshot o log (opzionale)
+      description: |
+        🇬🇧 Paste any relevant logs or attach screenshots after submitting.  
+        🇮🇹 Incolla log rilevanti o allega screenshot dopo l’invio.
+      placeholder: "Paste logs here / Incolla i log qui"
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity / Gravità
+      options:
+        - Critical (game-breaking) / Critico (blocca il gioco)
+        - Medium (annoying but playable) / Medio (fastidioso ma giocabile)
+        - Minor (visual or harmless bug) / Minore (bug estetico o innocuo)
+    validations:
+      required: true
