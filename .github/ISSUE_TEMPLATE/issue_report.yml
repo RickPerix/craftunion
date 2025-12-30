@@ -17,12 +17,25 @@ body:
     attributes:
       label: Issue type / Tipo di problema
       options:
-        - Technical issue / crash
-        - Lag / performance issue
-        - Gameplay issue
-        - UI / visual issue (menus, scoreboard, etc.)
-        - Permission issue
+        - Technical issue / Problema tecnico
+        - Crash / Crash
+        - Lag / Performance issue / Lag o problema di prestazioni
+        - Gameplay issue / Problema di gameplay
+        - UI / Visual issue (menus, scoreboard, etc.) / Problema grafico o UI (menu, scoreboard, ecc.)
+        - Permission issue / Problema di permessi
+        - Connection / Network issue / Problema di connessione o rete
         - Other / Altro
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary of the issue / Riassunto del problema
+      description: |
+        🇬🇧 Provide a short summary of the issue.  
+        🇮🇹 Fornisci un breve riassunto del problema.
+      placeholder: "Short summary / Breve riassunto"
     validations:
       required: true
 
@@ -31,8 +44,8 @@ body:
     attributes:
       label: What were you trying to do? / Cosa stavi cercando di fare?
       description: |
-        🇬🇧 Explain the action you were performing.  
-        🇮🇹 Spiega l'azione che stavi compiendo.
+        🇬🇧 Explain the action you were performing before the issue occurred.  
+        🇮🇹 Spiega l'azione che stavi compiendo prima che il problema si verificasse.
       placeholder: |
         Example / Esempio:
         I was trying to open a chest...
@@ -49,6 +62,19 @@ body:
       placeholder: |
         Example / Esempio:
         The chest didn't open and I received an error message...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior / Comportamento atteso
+      description: |
+        🇬🇧 Describe what should have happened instead.  
+        🇮🇹 Descrivi cosa sarebbe dovuto accadere.
+      placeholder: |
+        Example / Esempio:
+        The chest should open normally...
     validations:
       required: true
 
@@ -78,6 +104,20 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where did the issue occur? / Dove si è verificato il problema?
+      options:
+        - Survival / Survival
+        - Creative / Creative
+        - Lobby / Lobby
+        - Minigames / Minigiochi
+        - Custom world / Mondo personalizzato
+        - Other / Altro
+    validations:
+      required: true
+
   - type: input
     id: client_version
     attributes:
@@ -87,12 +127,34 @@ body:
       required: true
 
   - type: input
+    id: server_version
+    attributes:
+      label: Server version (if known) / Versione del server (se conosciuta)
+      placeholder: "Example / Esempio: Paper 1.20.4"
+    validations:
+      required: false
+
+  - type: input
     id: client_mods
     attributes:
       label: Mods or special clients? / Usi mod o client particolari?
       placeholder: "Example / Esempio: Lunar Client, Forge, Optifine..."
     validations:
       required: false
+
+  - type: textarea
+    id: network_info
+    attributes:
+      label: Connection details (optional) / Dettagli connessione (opzionale)
+      description: |
+        🇬🇧 Useful for diagnosing lag or connection issues.  
+        🇮🇹 Utile per diagnosticare lag o problemi di connessione.
+      placeholder: |
+        Example / Esempio:
+        - Ping: 80ms
+        - Connection type: Wi-Fi
+        - VPN: No
+        - Packet loss: None / Nessuna perdita di pacchetti
 
   - type: textarea
     id: logs
@@ -109,7 +171,17 @@ body:
       label: Severity / Gravità
       options:
         - Critical (game-breaking) / Critico (blocca il gioco)
+        - High (major issue) / Alto (problema importante)
         - Medium (annoying but playable) / Medio (fastidioso ma giocabile)
         - Minor (visual or harmless issue) / Minore (problema estetico o innocuo)
     validations:
       required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional information / Informazioni aggiuntive
+      description: |
+        🇬🇧 Add anything else that might help us understand the issue.  
+        🇮🇹 Aggiungi qualsiasi altra informazione utile.
+      placeholder: "Optional notes / Note opzionali"
