@@ -1,16 +1,16 @@
-name: Bug Report / Segnalazione Bug
-description: Report a problem encountered on the Minecraft server / Segnala un problema riscontrato nel server Minecraft
-title: "[BUG] Short description / Breve descrizione"
-labels: ["bug"]
+name: Issue Report / Segnalazione Problema
+description: Report an issue encountered on the Minecraft server / Segnala un problema riscontrato nel server Minecraft
+title: "[ISSUE] Short description / Breve descrizione"
+labels: ["issue"]
 body:
   - type: markdown
     attributes:
       value: |
         ## 🇬🇧 English
-        Thank you for reporting a bug! Please fill out the form below with as much detail as possible.
+        Thank you for reporting an issue! Please fill out the form below with as much detail as possible.
 
         ## 🇮🇹 Italiano
-        Grazie per aver segnalato un bug! Compila il modulo seguente con più dettagli possibile.
+        Grazie per aver segnalato un problema! Compila il modulo seguente con più dettagli possibile.
 
   - type: dropdown
     id: category
@@ -19,7 +19,7 @@ body:
       options:
         - Technical issue / crash
         - Lag / performance issue
-        - Gameplay bug
+        - Gameplay issue
         - UI / visual issue (menus, scoreboard, etc.)
         - Permission issue
         - Other / Altro
@@ -42,7 +42,7 @@ body:
   - type: textarea
     id: what_happened
     attributes:
-      label: What happened instead? / Cosa è successo invece?
+      label: What happened? / Cosa è successo?
       description: |
         🇬🇧 Describe the incorrect or unexpected behavior.  
         🇮🇹 Descrivi il comportamento errato o inatteso.
@@ -55,7 +55,7 @@ body:
   - type: textarea
     id: reproduction_steps
     attributes:
-      label: Steps to reproduce / Passaggi per riprodurre
+      label: Steps to reproduce the issue / Passaggi per riprodurre il problema
       description: |
         🇬🇧 List the steps needed to trigger the issue.  
         🇮🇹 Elenca i passaggi necessari per far accadere il problema.
@@ -110,6 +110,6 @@ body:
       options:
         - Critical (game-breaking) / Critico (blocca il gioco)
         - Medium (annoying but playable) / Medio (fastidioso ma giocabile)
-        - Minor (visual or harmless bug) / Minore (bug estetico o innocuo)
+        - Minor (visual or harmless issue) / Minore (problema estetico o innocuo)
     validations:
       required: true
