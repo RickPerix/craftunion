@@ -19,11 +19,11 @@ body:
       options:
         - Technical issue / Problema tecnico
         - Crash / Crash
-        - Lag / Performance issue / Lag o problema di prestazioni
+        - Lag or performance issue / Lag o problema di prestazioni
         - Gameplay issue / Problema di gameplay
-        - UI / Visual issue (menus, scoreboard, etc.) / Problema grafico o UI (menu, scoreboard, ecc.)
+        - UI or visual issue (menus, scoreboard, etc.) / Problema grafico o dell'interfaccia (menu, scoreboard, ecc.)
         - Permission issue / Problema di permessi
-        - Connection / Network issue / Problema di connessione o rete
+        - Connection or network issue / Problema di connessione o rete
         - Other / Altro
     validations:
       required: true
@@ -44,8 +44,8 @@ body:
     attributes:
       label: What were you trying to do? / Cosa stavi cercando di fare?
       description: |
-        🇬🇧 Explain the action you were performing before the issue occurred.  
-        🇮🇹 Spiega l'azione che stavi compiendo prima che il problema si verificasse.
+        🇬🇧 Explain what you were doing before the issue occurred.  
+        🇮🇹 Spiega cosa stavi facendo prima che il problema si verificasse.
       placeholder: |
         Example / Esempio:
         I was trying to open a chest...
@@ -57,8 +57,8 @@ body:
     attributes:
       label: What happened? / Cosa è successo?
       description: |
-        🇬🇧 Describe the incorrect or unexpected behavior.  
-        🇮🇹 Descrivi il comportamento errato o inatteso.
+        🇬🇧 Describe exactly what happened and why it is a problem.  
+        🇮🇹 Descrivi cosa è accaduto esattamente e perché è un problema.
       placeholder: |
         Example / Esempio:
         The chest didn't open and I received an error message...
@@ -71,7 +71,7 @@ body:
       label: Expected behavior / Comportamento atteso
       description: |
         🇬🇧 Describe what should have happened instead.  
-        🇮🇹 Descrivi cosa sarebbe dovuto accadere.
+        🇮🇹 Descrivi cosa sarebbe dovuto accadere in condizioni normali.
       placeholder: |
         Example / Esempio:
         The chest should open normally...
@@ -83,8 +83,8 @@ body:
     attributes:
       label: Steps to reproduce the issue / Passaggi per riprodurre il problema
       description: |
-        🇬🇧 List the steps needed to trigger the issue.  
-        🇮🇹 Elenca i passaggi necessari per far accadere il problema.
+        🇬🇧 List the steps needed to reproduce the issue.  
+        🇮🇹 Elenca i passaggi necessari per riprodurre il problema.
       placeholder: |
         1. Go to... / Vai in...
         2. Use the command... / Usa il comando...
@@ -109,8 +109,8 @@ body:
     attributes:
       label: Survival area or context / Area o contesto del Survival
       description: |
-        🇬🇧 Specify where in the Survival world the issue occurred (warp, coordinates, region, farm, protected area, etc.).  
-        🇮🇹 Specifica dove nel mondo Survival si è verificato il problema (warp, coordinate, regione, farm, area protetta, ecc.).
+        🇬🇧 Specify where in the Survival world the issue occurred (warp, coordinates, region, base, farm, protected area, etc.).  
+        🇮🇹 Indica dove si è verificato il problema nel mondo Survival (warp, coordinate, regione, base, farm, area protetta, ecc.).
       placeholder: |
         Example / Esempio:
         - Warp: /warp market
@@ -139,7 +139,7 @@ body:
   - type: input
     id: client_mods
     attributes:
-      label: Mods or special clients? / Usi mod o client particolari?
+      label: Mods or special clients? / Usi mod o client personalizzati?
       placeholder: "Example / Esempio: Lunar Client, Forge, Optifine..."
     validations:
       required: false
@@ -150,11 +150,11 @@ body:
       label: Connection details (optional) / Dettagli connessione (opzionale)
       description: |
         🇬🇧 Useful for diagnosing lag or connection issues.  
-        🇮🇹 Utile per diagnosticare lag o problemi di connessione.
+        🇮🇹 Utile per analizzare problemi di lag o connessione.
       placeholder: |
         Example / Esempio:
         - Ping: 80ms
-        - Connection type: Wi-Fi
+        - Connection type: Wi‑Fi
         - VPN: No
         - Packet loss: None / Nessuna perdita di pacchetti
 
@@ -164,7 +164,7 @@ body:
       label: Screenshots or logs (optional) / Screenshot o log (opzionale)
       description: |
         🇬🇧 Paste any relevant logs or attach screenshots after submitting.  
-        🇮🇹 Incolla log rilevanti o allega screenshot dopo l’invio.
+        🇮🇹 Incolla eventuali log rilevanti o allega screenshot dopo l’invio.
       placeholder: "Paste logs here / Incolla i log qui"
 
   - type: dropdown
@@ -175,7 +175,7 @@ body:
         - Critical (game-breaking) / Critico (blocca il gioco)
         - High (major issue) / Alto (problema importante)
         - Medium (annoying but playable) / Medio (fastidioso ma giocabile)
-        - Minor (visual or harmless issue) / Minore (problema estetico o innocuo)
+        - Minor (visual or harmless issue) / Minore (problema estetico o poco rilevante)
     validations:
       required: true
 
@@ -185,5 +185,5 @@ body:
       label: Additional information / Informazioni aggiuntive
       description: |
         🇬🇧 Add anything else that might help us understand the issue.  
-        🇮🇹 Aggiungi qualsiasi altra informazione utile.
+        🇮🇹 Aggiungi qualsiasi altra informazione utile alla comprensione del problema.
       placeholder: "Optional notes / Note opzionali"
